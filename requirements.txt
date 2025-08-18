@@ -1,0 +1,13 @@
+transformers==4.35.2
+fastapi==0.115.13
+uvicorn==0.24.0.post1
+pyyaml==6.0.1
+torch
+torchaudio
+pandas
+accelerate
+evaluate
+jiwer
+tensorboard
+gradio==4.26.0
+gradio_client==0.15.1
