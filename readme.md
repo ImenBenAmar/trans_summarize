@@ -1,53 +1,63 @@
 # Voice & Text Summarizer
 
-Ce projet propose une **interface utilisateur** permettant de **transcrire de l'audio** et de **résumer du texte** ou des articles grâce à des modèles avancés de traitement du langage naturel.
+This project provides a simple interface for transcribing audio and summarizing text using state-of-the-art machine learning models. It features a Gradio web app for easy interaction.
 
-## Fonctionnalités
+## Features
 
-- Résumer rapidement n'importe quel texte ou article
-- Transcrire de l'audio enregistré en texte
-- Choisir le modèle de résumé et ajuster les paramètres (longueur, beams, etc.)
-- Interface simple et intuitive
+- **Audio Transcription:** Record or upload audio and get English transcriptions using a fine-tuned Whisper model.
+- **Text Summarization:** Paste or type text and generate concise summaries using BART models.
+- **Customizable:** Choose summarization model and adjust summary length and beam search parameters.
 
-## Installation
+## Usage
 
-1. Clonez le dépôt :
+### 1. Local Setup
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/votre-utilisateur/Trans-summarizer.git
-   cd Trans-summarizer
+   git clone <your-repo-url>
+   cd trans_summarize
    ```
-2. Installez les dépendances Python :
+
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-   ou lancez via Docker :
-   ```bash
-   docker build -t trans-summarizer .
-   docker run -p 7860:7860 trans-summarizer
-   ```
 
-## Utilisation
-
-1. Lancez l'application :
+3. Run the Gradio app:
    ```bash
    python gradio_app.py
    ```
-   ou via Docker comme indiqué ci-dessus.
-2. Ouvrez votre navigateur à l'adresse affichée (par défaut http://localhost:7860).
-3. Utilisez l'interface pour :
-   - Saisir ou coller du texte à résumer
-   - Enregistrer votre voix pour la transcription
-   - Choisir le modèle et les paramètres de résumé
-   - Lire le résultat dans la boîte de sortie
 
-## Contribution
+4. Access the web interface at [http://localhost:7860](http://localhost:7860).
 
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
+### 2. Using Docker
 
-## Licence
+1. Build the Docker image:
+   ```bash
+   docker build -t trans-summarizer .
+   ```
 
-Ce projet est sous licence MIT.
+2. Run the container:
+   ```bash
+   docker run -p 7861:7861 trans-summarizer
+   ```
 
-![Interface](interface.png)
+3. Open [http://localhost:7861](http://localhost:7860) in your browser.
+
+## File Structure
+
+- `gradio_app.py`: Main Gradio web app.
+- `src/transcribtion_summarizer/`: Source code for transcription and summarization.
+- `requirements.txt`: Python dependencies.
+- `Dockerfile`: Docker configuration.
+
+## Notes
+
+- The app uses HuggingFace models and requires internet access for initial downloads.
+- For best results, use clear audio recordings and well-formed text.
+
+## License
+
+MIT License
 
 
