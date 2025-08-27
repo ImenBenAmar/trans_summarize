@@ -8,6 +8,14 @@ This project provides a simple interface for transcribing audio and summarizing 
 - **Text Summarization:** Paste or type text and generate concise summaries using BART models.
 - **Customizable:** Choose summarization model and adjust summary length and beam search parameters.
 
+## Interface & Testing
+
+### Dark Theme
+![Dark Theme Interface](interface.png)
+
+### Light Theme & Example Test
+![Light Theme Example](testing.png)
+
 ## Usage
 
 ### 1. Local Setup
