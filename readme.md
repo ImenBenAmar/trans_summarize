@@ -47,10 +47,10 @@ This project provides a simple interface for transcribing audio and summarizing 
 
 2. Run the container:
    ```bash
-   docker run -p 7861:7861 trans-summarizer
+   docker run -p 7860:7860 trans-summarizer
    ```
 
-3. Open [http://localhost:7861](http://localhost:7860) in your browser.
+3. Open [http://localhost:7860](http://localhost:7860) in your browser.
 
 ## File Structure
 
